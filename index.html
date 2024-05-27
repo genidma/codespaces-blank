@@ -57,9 +57,7 @@
         <path d="M 1090 290 Q 1100 270 1110 290" stroke="black" fill="transparent"/>
     </g>
 
-    <!-- Let's put some indoor plants -->
-<!-- Add this inside the SVG tag -->
-
+<!-- Let's put some indoor plants -->
 <!-- Plant 1 in Room 1 -->
 <g>
     <ellipse cx="100" cy="210" rx="10" ry="20" fill="green" />
@@ -91,6 +89,42 @@
     <ellipse cx="605" cy="460" rx="10" ry="20" fill="green" />
     <rect x="603" y="490" width="4" height="20" fill="brown" />
 </g>
+
+<!-- Adding animatio of stick figure walking through lobby and towards Room 3? -->
+<!-- ...existing SVG elements... -->
+
+    <!-- Stick Figure -->
+    <g id="stickFigure" transform="translate(1025, 285)">
+        <!-- Head -->
+        <circle cx="0" cy="0" r="7" fill="green"/>
+        <!-- Body -->
+        <line x1="0" y1="10" x2="0" y2="30" style="stroke:rgb(4, 75, 11); stroke-width:2"/>
+        <!-- Arms -->
+        <line x1="-10" y1="20" x2="10" y2="20" style="stroke:black; stroke-width:1.5"/>
+        <!-- Legs -->
+        <line x1="0" y1="30" x2="-10" y2="40" style="stroke:black; stroke-width:3"/>
+        <line x1="0" y1="30" x2="10" y2="40" style="stroke:black; stroke-width:3"/>
+    </g>
+
+    <script>
+        // Get the stick figure element
+        var stickFigure = document.getElementById('stickFigure');
+
+        // Define the animation
+        var animation = [
+            { transform: 'translate(0, 0)' }, // Start position (Lobby)
+            { transform: 'translate(0, -400)' }, // End position (Room 2)
+        ];
+
+        // Define the timing
+        var timing = {
+            duration: 1500, // 2 seconds
+            iterations: 2 // Only do it once
+        };
+
+        // Start the animation
+        stickFigure.animate(animation, timing);
+    </script>
 </svg>
 
 <style>
