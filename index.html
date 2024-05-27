@@ -7,43 +7,63 @@
     <text x="250" y="150" font-family="Verdana" font-size="35" fill="black">Room 1</text>
 
     <!-- Door 1 -->
-    <line x1="450" y1="130" x2="450" y2="180" style="stroke:black; stroke-width:2"/>
-    <rect x="440" y="130" width="20" height="50" style="fill:blue; stroke:black; stroke-width:2"/>
-    <path d="M 440 130 Q 450 110 460 130" stroke="black" fill="transparent"/>
+    <g class="door">
+        <line x1="450" y1="130" x2="450" y2="180" style="stroke:black; stroke-width:2"/>
+        <rect x="440" y="130" width="20" height="50" style="fill:blue; stroke:black; stroke-width:2"/>
+        <path d="M 440 130 Q 450 110 460 130" stroke="black" fill="transparent"/>
+    </g>
 
     <!-- Room 2 -->
     <rect x="500" y="50" width="400" height="210" style="stroke:black; stroke-width:2; fill:none"/>
     <text x="700" y="150" font-family="Verdana" font-size="35" fill="black">Room 2</text>
 
     <!-- Door 2 -->
-    <line x1="900" y1="130" x2="900" y2="180" style="stroke:black; stroke-width:2"/>
-    <rect x="890" y="130" width="20" height="50" style="fill:blue; stroke:black; stroke-width:2"/>
-    <path d="M 890 130 Q 900 110 910 130" stroke="black" fill="transparent"/>
+    <g class="door">
+        <line x1="900" y1="130" x2="900" y2="180" style="stroke:black; stroke-width:2"/>
+        <rect x="890" y="130" width="20" height="50" style="fill:blue; stroke:black; stroke-width:2"/>
+        <path d="M 890 130 Q 900 110 910 130" stroke="black" fill="transparent"/>
+    </g>
 
     <!-- Room 3 -->
     <rect x="50" y="310" width="400" height="210" style="stroke:black; stroke-width:2; fill:none"/>
     <text x="250" y="410" font-family="Verdana" font-size="35" fill="black">Room 3</text>
 
     <!-- Door 3 -->
-    <line x1="450" y1="390" x2="450" y2="440" style="stroke:black; stroke-width:2"/>
-    <rect x="440" y="390" width="20" height="50" style="fill:blue; stroke:black; stroke-width:2"/>
-    <path d="M 440 390 Q 450 370 460 390" stroke="black" fill="transparent"/>
+    <g class="door">
+        <line x1="450" y1="390" x2="450" y2="440" style="stroke:black; stroke-width:2"/>
+        <rect x="440" y="390" width="20" height="50" style="fill:blue; stroke:black; stroke-width:2"/>
+        <path d="M 440 390 Q 450 370 460 390" stroke="black" fill="transparent"/>
+    </g>
 
     <!-- Room 4 -->
     <rect x="500" y="310" width="400" height="210" style="stroke:black; stroke-width:2; fill:none"/>
     <text x="700" y="410" font-family="Verdana" font-size="35" fill="black">Room 4</text>
 
     <!-- Door 4 -->
-    <line x1="900" y1="390" x2="900" y2="440" style="stroke:black; stroke-width:2"/>
-    <rect x="890" y="390" width="20" height="50" style="fill:blue; stroke:black; stroke-width:2"/>
-    <path d="M 890 390 Q 900 370 910 390" stroke="black" fill="transparent"/>
+    <g class="door">
+        <line x1="900" y1="390" x2="900" y2="440" style="stroke:black; stroke-width:2"/>
+        <rect x="890" y="390" width="20" height="50" style="fill:blue; stroke:black; stroke-width:2"/>
+        <path d="M 890 390 Q 900 370 910 390" stroke="black" fill="transparent"/>
+    </g>
 
     <!-- Lobby -->
     <rect x="950" y="210" width="150" height="150" style="stroke:black; stroke-width:2; fill:none"/>
     <text x="965" y="310" font-family="Verdana" font-size="35" fill="black">Lobby</text>
 
     <!-- Door 5 -->
-    <line x1="1100" y1="290" x2="1100" y2="340" style="stroke:black; stroke-width:2"/>
-    <rect x="1090" y="290" width="20" height="50" style="fill:blue; stroke:black; stroke-width:2"/>
-    <path d="M 1090 290 Q 1100 270 1110 290" stroke="black" fill="transparent"/>
+    <g class="door">
+        <line x1="1100" y1="290" x2="1100" y2="340" style="stroke:black; stroke-width:2"/>
+        <rect x="1090" y="290" width="20" height="50" style="fill:blue; stroke:black; stroke-width:2"/>
+        <path d="M 1090 290 Q 1100 270 1110 290" stroke="black" fill="transparent"/>
+    </g>
 </svg>
+
+<style>
+    .door {
+        transition: transform 0.5s;
+    }
+
+    .door:hover {
+        transform: translateX(20px);
+    }
+</style>
