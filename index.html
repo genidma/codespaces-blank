@@ -90,10 +90,8 @@
     <rect x="603" y="490" width="4" height="20" fill="brown" />
 </g>
 
-<!-- Adding animatio of stick figure walking through lobby and towards Room 3? -->
-<!-- ...existing SVG elements... -->
-
-    <!-- Stick Figure -->
+<!-- Adding animation of stick figure walking through lobby and towards Room 3? It's not working the way I intended -->
+<!-- Stick Figure -->
     <g id="stickFigure" transform="translate(1025, 285)">
         <!-- Head -->
         <circle cx="0" cy="0" r="7" fill="green"/>
@@ -112,13 +110,14 @@
 
         // Define the animation
         var animation = [
-            { transform: 'translate(0, 0)' }, // Start position (Lobby)
-            { transform: 'translate(0, -400)' }, // End position (Room 2)
+            { transform: 'translate(0, 40)' }, // Start position (Lobby)
+            { transform: 'translate(0, 0)' }, // End position (Room 2)
+
         ];
 
         // Define the timing
         var timing = {
-            duration: 1500, // 2 seconds
+            duration: 1900, // 2.4 seconds
             iterations: 2 // Only do it once
         };
 
@@ -126,6 +125,39 @@
         stickFigure.animate(animation, timing);
     </script>
 </svg>
+
+<!-- Adding animation pet_dog -->
+<!-- pet -->
+<svg id="dogSvg" width="70" height="70">
+    <path d="M 15 15 Q 25 5 35 15" fill="black" /> <!-- Left ear -->
+    <path d="M 35 15 Q 25 5 15 15" fill="black" /> <!-- Right ear -->
+    <circle cx="27" cy="23" r="18" fill="brown" /> <!-- Head -->
+    <circle cx="20" cy="20" r="5" fill="white" /> <!-- Eye -->
+    <circle cx="20" cy="20" r="2" fill="black" /> <!-- Eyeball -->
+    <circle cx="30" cy="20" r="5" fill="white" /> <!-- Eye -->
+    <circle cx="30" cy="20" r="2" fill="black" /> <!-- Eyeball -->
+    <path d="M 20 30 Q 25 40 30 30" stroke="black" fill="transparent" /> <!-- Mouth -->
+</svg>
+
+<script>
+    // Get the dog element
+    var dogSvg = document.getElementById('dogSvg');
+
+    // Define the animation
+    var animation = [
+        { transform: 'translate(0, 0)' }, // Start position (Lobby)
+        { transform: 'translate(200, 100)' }, // End position (Room 2)
+    ];
+
+    // Define the timing
+    var timing = {
+        duration: 3000, // 3 seconds
+        iterations: 2 // Twice
+    };
+
+    // Start the animation
+    dogSvg.animate(animation, timing);
+</script>
 
 <style>
     .door {
